@@ -1,0 +1,160 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aditya Tiwari - Digital Learning for Everyone. Accessible, affordable, and inclusive online courses.">
+  <title>Aditya Tiwari | Digital Learner</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Digital Learner</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#mission">Mission</a>
+      <a href="#courses">Courses</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Empowering Everyone in the Digital Age</h1>
+    <p>
+      Hi, I'm Aditya Tiwari – a student passionate about learning and teaching digital technology. 
+      My mission is to make technology accessible for everyone, so no one has to depend on others 
+      in this digital era.
+    </p>
+    <a href="#courses">Explore Courses</a>
+    <a href="#contact">Join Now</a>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am Aditya Tiwari, a school student from UtterPradesh who believes that digital knowledge should be for everyone – 
+        whether fully sighted, partially sighted, or visually impaired. My goal is to create accessible, affordable, 
+        and inclusive learning opportunities so that every individual can walk together in the digital world with 
+        independence and confidence.
+      </p>
+    </section>
+
+    <section id="mission">
+      <h2>My Mission</h2>
+      <ul>
+        <li> To spread digital literacy across all communities.</li>
+        <li> To provide accessible content for visually impaired learners.</li>
+        <li> To offer free and affordable online courses.</li>
+        <li> To help people become independent in the digital era.</li>
+      </ul>
+    </section>
+
+    <section id="courses">
+      <h2>Our Courses</h2>
+      <p>(Currently, only HTML course is live. Other courses are coming soon!)</p>
+
+      <h3>Hindi Typing Course (Coming Soon)</h3>
+      <ul>
+        <li>Learn Hindi typing from basics to advanced.</li>
+        <li>Accessible lessons with step-by-step guidance.</li>
+        <li>Practice exercises to improve speed and accuracy.</li>
+      </ul>
+
+      <h3>English Typing Course (Coming Soon)</h3>
+      <ul>
+        <li>Master English typing with interactive lessons.</li>
+        <li>Focus on speed, accuracy, and professional use.</li>
+        <li>Accessible for screen readers and online practice.</li>
+      </ul>
+
+      <h3>Microsoft Word – Basic to Advanced (Coming Soon)</h3>
+      <ul>
+        <li>Learn document creation, formatting, and advanced tools.</li>
+        <li>Practical projects for school and professional use.</li>
+        <li>Accessible tutorials with clear instructions.</li>
+      </ul>
+
+      <h3>Microsoft Excel – Basic to Advanced (Coming Soon)</h3>
+      <ul>
+        <li>From simple calculations to advanced data analysis.</li>
+        <li>Real-life examples for students and professionals.</li>
+        <li>Accessible spreadsheets and guided exercises.</li>
+      </ul>
+
+      <h3>Microsoft PowerPoint – Basic to Advanced (Coming Soon)</h3>
+      <ul>
+        <li>Learn to design impactful presentations.</li>
+        <li>Templates, animations, and professional tips.</li>
+        <li>Accessible slides for inclusive learning.</li>
+      </ul>
+
+      <h3>HTML – Basic to Advanced (LIVE NOW)</h3>
+      <ul>
+        <li>Learn the foundation of web development.</li>
+        <li>Step-by-step lessons from beginner to advanced.</li>
+        <li>Accessible coding environment with examples.</li>
+        <li> No prior coding knowledge required </li>
+        <li>Build your own website by the end of this course.</li>
+      </ul>
+    <a href="course.html">   <button> Learn More </button> </a> 
+    <a href="form.html"> <button> Register Now </button> </a> 
+    </section>
+
+    <section id="why">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li> Accessible for everyone (including visually impaired learners).</li>
+        <li> Affordable and free courses.</li>
+        <li> Online learning from anywhere.</li>
+        <li> Practical, easy-to-understand lessons.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <p>Ready to start your digital journey? Let's learn and grow together.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+  <h3> Footor</h3>
+  <p> feel free to contact us:</p>
+  <form mathod="post" id="contact-form">
+  <input type="hidden" name="access_key" value="5d1e165c-64bf-4ab8-966b-005ddfee7869">
+  <input type="text" name="name" placeholder="Enter your name"><br><br>
+  <input type="email" name="Email" placeholder="Enter your Email ID"><br><br>
+  <input type="textbox" name="user-query" placeholder="type your question or suggrstion or problem"><br><br>
+  <input type="submit" value="submit">
+  </form>
+    <p>© 2025 Digital Learner. All Rights Reserved.</p>
+  </footer>
+
+<script>
+const form = document.getElementById("contact-form");
+form.addEventListener("submit", async function (event) {
+  event.preventDefault(); // पेज reload होने से रोकता है 
+  const formData = new FormData(form);
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  });
+
+  const result = await response.json();
+
+  if (result.success) {
+    alert("✅ Your response has been submitted successfully!");
+    form.reset(); // सबमिट के बाद फॉर्म खाली कर दो
+  } else {
+    alert("❌ Something went wrong. Please try again!");
+  }
+});
+</script>
+
+</body>
+</html>

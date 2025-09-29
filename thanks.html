@@ -1,0 +1,26 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+</head>
+<body>
+  <h1>Thank You!</h1>
+  <p>Your registration has been submitted successfully.</p>
+  <p>We appreciate your interest in our course. You will receive further details via email soon.</p>
+
+  <button onclick="goHome()">Go to Home</button>
+  <button onclick="closePage()">Exit</button>
+
+  <script>
+    function goHome() {
+      window.location.href = "index.html";
+    }
+    function closePage() {
+      window.open('', '_self');
+      window.close();
+    }
+  </script>
+</body>
+</html>
