@@ -1,178 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Accessible registration form for HTML Basic to Advanced Course by Aditya Tiwari.">
-  <meta name="author" content="Aditya Tiwari">
-  <meta name="robots" content="index, follow">
-  <title>Registration Form</title>
+<title> Registration form</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #1d4ed8;
-      font-size: 1.8em;
-      margin-bottom: 20px;
-    }
-
-    form {
-      max-width: 600px;
-      margin: auto;
-      background: #ffffff;
-      padding: 20px 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    form div {
-      margin-bottom: 15px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="date"],
-    input[type="textbox"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #cbd5e1;
-      border-radius: 6px;
-      font-size: 1em;
-    }
-
-    input[type="radio"],
-    input[type="checkbox"] {
-      margin-right: 6px;
-    }
-
-    input[type="submit"],
-    input[type="reset"] {
-      background-color: #2563eb;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1em;
-      margin-right: 10px;
-      transition: background 0.3s;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #1e40af;
-    }
-
-    input[type="reset"]:hover {
-      background-color: #475569;
-    }
-
-    ::placeholder {
-      color: #94a3b8;
-    }
-
-    @media (max-width: 600px) {
-      form {
-        padding: 15px;
-      }
-    }
-  </style>
-
-  <script>
+<script>
     function focusOtherInput() {
       document.getElementById("ootherst").focus();
     }
   </script>
+
 </head>
 
 <body>
 
-  <h1>Registration Form for HTML Basic to Advance Course (Accessible)</h1>
+<h1> 
+	Registration Form for HTML basic to Advance Course (Accessible)	
+</h1>
 
-  <form action="thanks.html" name="registration">
-    <input type="hidden" name="form-name" value="registration">
-    <input type="hidden" name="access_key" value="5d1e165c-64bf-4ab8-966b-005ddfee7869">
-
-    <div>
-      Name:<br>
-      <input type="text" placeholder="Full Name" name="name" required autofocus>
-    </div>
-
-    <div>
-      Email:<br>
-      <input type="email" placeholder="Enter your Email id" name="Email ID" required>
-    </div>
-
-    <div>
-      Mobile No:<br>
-      <input type="tel" placeholder="Enter your Phone number" name="Mobile No:" required>
-    </div>
-
-    <div>
-      Date of Birth:<br>
-      <input type="date" name="DOB" required>
-    </div>
-
-    <div>
-      Gender:<br>
-      <input type="radio" name="gender" value="Male" required> Male
-      <input type="radio" name="gender" value="Female" required> Female
-      <input type="radio" name="gender" value="Others" required> Others
-    </div>
-
-    <div>
-      You have any Disabilities:<br>
-      <input type="checkbox" name="able" value="low vision"> Low vision <br>
-      <input type="checkbox" name="able" value="blind"> Blind <br>
-      <input type="checkbox" name="ablle" value="nothing"> No Disabilities
-    </div>
-
-    <div>
-      You are comfortable with:<br>
-      <input type="radio" name="sr" value="NVDA" required> NVDA <br>
-      <input type="radio" name="sr" value="JAWS" required> JAWS <br>
-      <input type="radio" name="sr" value="both" required> Both
-    </div>
-
-    <div>
-      Current status:<br>
-      <input type="radio" name="working-status" value="Student" required> Student <br>
-      <input type="radio" name="working-status" value="self-Emploid" required> Self-Employed <br>
-      <input type="radio" name="working-status" value="full time/part time" required> Employed full time/part time<br>
-      <input type="radio" name="working-status" value="Unemploid" required> Unemployed<br>
-      <input type="radio" name="working-status" value="others" required id="others"> Others 
-      <input type="text" placeholder="Please specify">
-    </div>
-
-    <div>
-      City:<br>
-      <input type="text" placeholder="Enter your city" name="City" required>
-    </div>
-
-    <div>
-      State:<br>
-      <input type="text" placeholder="Enter your state" name="state" required>
-    </div>
-
-    <div>
-      Complete Address:<br>
-      <input type="textbox" placeholder="Enter your complete address (state, city, colony, building/house name and number, Pincode)." name="Complete address" required>
-    </div>
-
-    <div>
-      <input type="submit" value="Submit">
-      <input type="reset" value="Clear">
-    </div>
-  </form>
+<form  action="thanks.html"  name="registration" >
+<input type="hidden" name=" form-name" value=" registration">
+	<input type="hidden" name="access_key" value="5d1e165c-64bf-4ab8-966b-005ddfee7869">
+	<div>
+		<div> 
+			Name: <br> 
+			<input type="Text" placeholder="Full Name" name="name" required autofocus>
+			<br> <br>
+		</div>
+		<div>
+			Email: <br>
+			<input type="email" placeholder="Enter your Email id" name="Email ID" required>
+			<br> <br>
+		</div>
+		<div>
+			Mobile No: <br>
+			<input type="tel" placeholder="Enter your Phone number" name="Mobile No:" required>
+			<br> <br>
+		</div>
+		<div>
+			date of burth: <br>
+			<input type="date" name="DOB" required>
+			<br> <br>
+		</div>
+		<div>
+			Gender:<br>
+			<input type="radio" name="gender" value="Male" required> Male
+			<input type="radio" name="gender" value="Female" required> Female
+			<input type="radio" name="gender" value="Others" required>Others
+			<br> <br>
+		</div>
+		<div>
+			You have any Disabilities: <br>
+			<input type="checkbox" name="able" value="low visuan"> Low vision <br>
+			<input type="checkbox" name="able" value="blind"> blind <br>
+			<input type="checkbox" name="ablle" value="nothing"> No Disabilities
+			<br> <br>
+		</div>
+		<div> 
+			You are comfertable with: <br>
+			<input type="radio" name="sr" value="NVDA" required> NVDA <br>
+			<input type="radio" name="sr" value="JAWS" required> JAWS <br>
+			<input type="radio" name="sr" value="both" required> Both
+			<br> <br>
+		</div>
+		<div>
+			current status: <br>
+			<input type="radio" name="working-status" value="Student" required> Student <br>
+			<input type="radio" name="working-status" value="self-Emploid" required> Self-Emploid <br>
+			<input type="radio" name="working-status" value="full time/part time" required> Emploid full time/part time</br>
+			<input type="radio" name="working-status" value="Unemploid" required> Unemploid<br>
+			<input type="radio" name="working-status" value="others" required id="others"> Others 
+			<input type="text">
+			<br> <br>
+		</div>
+		<div>
+			City: <br>
+			<input type="text" placeholder="enter your city" name="City" required>
+			<br> <br>
+		</div>
+		<div>
+			State: <br>
+			<input type="text" placeholder="enter your state" name="state" required>
+			<br> <br>
+		</div>
+		<div>
+			Compleate Address: <br>
+			<input type="textbox" placeholder="Enter your Compleate address 
+			state, city, colony, bilding/house name and number, Pincode." name="Compleate address" required>
+			<br> <br>
+		</div>
+		<div> 
+			<input type="submit" value="submit">
+			<input type="reset" value="Clear">
+			<br> <br>
+		</div>
+	</div>
+</form>
 
 </body>
 </html>
