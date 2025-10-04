@@ -1,56 +1,159 @@
-<!DOCTYPE html>
-<html>
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Registration Form</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Basic SEO / meta set (description, keywords, author, robots) -->
+  <meta name="description" content="HTML Basic to Advanced course (Hindi). Learn HTML from beginner to advanced with practical projects, screen-reader friendly lessons, Mon-Sat 6-7PM. Classes start 1 Dec 2025. Register now." />
+  <meta name="keywords" content="HTML course, HTML basic to advanced, web development, Hindi course, accessible course, Aditya Tiwari" />
+  <meta name="author" content="Aditya Tiwari" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (social preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Learn HTML: Basic to Advanced -- Course by Aditya Tiwari" />
+  <meta property="og:description" content="Complete HTML training in Hindi -- practical projects, screen-reader friendly. Classes 6-7PM (Mon-Sat). Starts 1 Dec 2025. Limited seats." />
+  <meta property="og:url" content="https://digital-learner-academy.github.io/Web/" />
+  <meta property="og:site_name" content="Digital Learner Academy" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Learn HTML: Basic to Advanced -- Course by Aditya Tiwari" />
+  <meta name="twitter:description" content="Complete HTML training in Hindi -- practical projects, screen-reader friendly. Classes 6-7PM (Mon-Sat). Starts 1 Dec 2025." />
+
+  <!-- Canonical (if applicable) -->
+  <link rel="canonical" href="https://digital-learner-academy.github.io/Web/form.html" />
+
+  <title>Learn HTML: Basic to Advanced -- Registration</title>
+
+  <style>
+    :root{
+      --accent:#1d3557;
+      --muted:#6b7280;
+      --card-bg:#ffffff;
+      --page-bg:#f4f6fb;
+      --success:#16a34a;
+    }
+    html,body{height:100%;margin:0;font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;background:var(--page-bg);color:#111;}
+    .container{max-width:900px;margin:32px auto;padding:22px;border-radius:12px;background:var(--card-bg);box-shadow:0 6px 22px rgba(16,24,40,0.06);}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .title{font-size:1.5rem;color:var(--accent);margin:0;display:flex;align-items:center;gap:10px}
+    .subtitle{color:var(--muted);margin:0;font-size:0.95rem}
+    .badge{background:#fffbeb;border:1px solid #fcefc7;padding:6px 10px;border-radius:999px;font-weight:600}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:18px}
+    @media (max-width:880px){ .grid{grid-template-columns:1fr} .aside{order:2} }
+    .card{padding:14px 16px;border-radius:10px;background:#fbfdff;border:1px solid #eef2f6}
+    h2{margin:0 0 8px 0;color:#0f172a}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:8px 0}
+    .price{font-size:1.2rem;margin:8px 0;display:flex;align-items:center;gap:10px}
+    .price del{color:#9ca3af}
+    .price strong{color:var(--accent);font-size:1.25rem}
+    .cta{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .footer{margin-top:18px;border-top:1px solid #eef2f6;padding-top:12px;font-size:0.95rem;color:var(--muted)}
+    .important{background:#fff7ed;border-left:4px solid #f59e0b;padding:10px;border-radius:6px;margin-top:10px}
+    .small{font-size:0.9rem}
+    .link{color:var(--accent);text-decoration:none;font-weight:600}
+    .note{font-size:0.92rem;color:#374151}
+  </style>
 </head>
 <body>
-<h1> Registration Form for HTML basic to Advance Course (Accessible)</h1>
-<pre> Learn HTML: Basic to Advanced
+  <main class="container" role="main" aria-labelledby="courseTitle">
+    <header>
+      <div>
+        <h1 id="courseTitle" class="title">🚀 Learn HTML: Basic to Advanced</h1>
+        <p class="subtitle">Registration Form • Organized by: <strong>Aditya Tiwari</strong> • Medium: <strong>Hindi</strong></p>
+      </div>
+      <div class="badge" aria-hidden="true">Accessible • Screen-reader friendly</div>
+    </header>
 
-📢 Organized by:Aditya Tiwari  
-Medium: Hindi Language
+    <div class="grid" role="region" aria-label="Course information and registration">
+      <!-- Main Info Column -->
+      <section class="card" aria-labelledby="overviewHeading">
+        <h2 id="overviewHeading">🎓 Course Overview</h2>
+        <p class="note">Complete training from beginner to advanced level in web development -- where you will learn both theory and practical projects.</p>
 
+        <h3 style="margin-top:12px">🌐 Course Highlights</h3>
+        <ul>
+          <li>✅ Learn the structure and key elements of HTML</li>
+          <li>✅ Webpage designing and programming (Basic to Advanced)</li>
+          <li>✅ Practical projects and weekly homework</li>
+          <li>✅ Screen reader friendly (especially for computer/laptop users)</li>
+          <li>🕒 Class Time: 6:00 PM to 7:00 PM</li>
+          <li>📆 Classes: Monday to Saturday</li>
+          <li>⏳ Course Duration: 1 month</li>
+        </ul>
 
- HTML Basic to Advanced Course
-Complete training from beginner to advanced level in web development 
-where you will learn both theory and practical projects.
+        <div style="margin-top:12px" class="important" aria-live="polite">
+          <strong>💰 Course Fees:</strong>
+          <div class="price">
+            <del>₹499</del>
+            <strong>₹299 only</strong>
+            <span class="muted"> (50% Off)</span>
+          </div>
+          <div class="small muted">Limited-time offer -- valid till <strong>23rd November 2025</strong></div>
+        </div>
 
-🌐 Course Highlights:
-Learn the structure and key elements of HTML  
-Webpage designing and programming from basic to advanced  
-Practical projects and weekly homework  
-Screen reader friendly, especially for computer/laptop users  
-Class Time: 6:00 PM to 7:00 PM  
-Classes: Monday to Saturday  
-ourse Duration: 1 month
+        <h3 style="margin-top:14px">📅 Important Information</h3>
+        <ul>
+          <li>📌 Classes start: <strong>1st December 2025</strong></li>
+          <li>📌 Attendance: Regular attendance is mandatory</li>
+          <li>📌 Assessment: Weekly homework and assessments</li>
+        </ul>
 
-📅 Important Information:
- Classes start: 1st December 2025  
- Attendance: Regular attendance is mandatory  
- Assessment: Weekly homework and assessments  
- course fee: Rs. 299 for one time
+        <h3 style="margin-top:14px">📝 Who should join?</h3>
+        <ul>
+          <li>✔ You want to start a career in web development</li>
+          <li>✔ You have basic knowledge of computers and internet</li>
+          <li>✔ You want to learn practical HTML</li>
+          <li>✔ You prefer learning in Hindi</li>
+        </ul>
 
-📝 This course is for you if:
-You want to start a career in web development  
-Have basic knowledge of computers and internet  
-Want to learn practical HTML  
-Prefer learning in Hindi
+        <h3 style="margin-top:14px">💡 After completing the course</h3>
+        <ul>
+          <li>Gain complete knowledge and confidence in HTML</li>
+          <li>Able to design real-life web pages</li>
+          <li>Ready for the next steps in development</li>
+        </ul>
 
-💡 After completing the course:
-- Gain complete knowledge and confidence in HTML  
-- Able to design real-life web pages  
-- Ready for next steps in development
+        <div class="footer" role="contentinfo">
+          <p><strong>Registration Deadline:</strong> <strong>23rd November 2025</strong></p>
+          <p class="small">After form submission, each registered student will be personally contacted via <strong>WhatsApp or call</strong> for payment and further steps. Students will be added to the official course group between <strong>28th–29th November 2025</strong>.</p>
+          <p class="small">Contact: <a class="link" href="tel:+919258411307">+91 92584 11307</a> • <a class="link" href="mailto:adityatiwari52432@gmail.com">adityatiwari52432@gmail.com</a></p>
+        </div>
+      </section>
 
-📞 For registration and information, contact:
-Phone: +91 9258411307  
-Email: adityatiwari52432@outlook.com  
+      <!-- Aside / Registration Card -->
+      <aside class="aside card" aria-labelledby="registerHeading">
+        <h2 id="registerHeading">📝 Register Now</h2>
+        <p class="muted small">Click below to open the registration form page:</p>
+        <p style="margin-top:8px">
+          <a class="cta" href="https://digital-learner-academy.github.io/Web/form.html" rel="noopener" target="_blank">Open Registration Form</a>
+        </p>
 
-⏳ Seats are limited, register now to start your digital journey!
-</pre>
+        <div style="margin-top:14px">
+          <h4 style="margin:0">Payment process (how it works)</h4>
+          <p class="small">● This page <strong>does not</strong> collect payments. After you submit the form, we will contact you personally via WhatsApp or phone for payment instructions. <br>
+          ● Once payment is confirmed, you will be added to the course group.</p>
+        </div>
 
-<a href="https://digital-learner-academy.github.io/Web/form.html"> <button> Register </button> </a>
+        <div style="margin-top:10px">
+          <h4 style="margin:0">Seats</h4>
+          <p class="small">Seats are limited -- register early to secure your place.</p>
+        </div>
 
+        <div style="margin-top:10px">
+          <h4 style="margin:0">Quick contacts</h4>
+          <p class="small">Phone: <a class="link" href="tel:+919258411307">+91 92584 11307</a><br>Email: <a class="link" href="mailto:adityatiwari52432@gmail.com">adityatiwari52432@gmail.com</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Optional small accessibility note -->
+    <p class="muted small" style="margin-top:18px">This page and the course materials are designed to be screen-reader friendly. If you need any help registering, call or message the phone number above.</p>
+  </main>
 </body>
 </html>
