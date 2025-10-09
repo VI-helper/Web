@@ -76,8 +76,23 @@
       background-color: #475569;
     }
 
+    input[type="submit"]:disabled {
+      background-color: #94a3b8;
+      cursor: not-allowed;
+    }
+
     ::placeholder {
       color: #94a3b8;
+    }
+
+    .clickable {
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .clickable:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
@@ -88,9 +103,50 @@
   </style>
 
   <script>
-    function focusOtherInput() {
-      document.getElementById("ootherst").focus();
+    // रेडियो और चेकबॉक्स टेक्स्ट क्लिक करने योग्य बनाना
+    function makeClickable() {
+      document.querySelectorAll('.clickable').forEach(label => {
+        label.addEventListener('click', () => {
+          const inputId = label.getAttribute('data-for');
+          const input = document.getElementById(inputId);
+          if (input) input.checked = !input.checked;
+        });
+      });
     }
+
+    // फॉर्म सबमिट हैंडलिंग (Web3Forms API के साथ)
+    async function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const submitBtn = form.querySelector('input[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.value = "Submitting...";
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          alert("✅ Your form has been submitted successfully!");
+          form.reset();
+        } else {
+          alert("❌ There was a problem submitting your form. Try again.");
+        }
+      } catch (error) {
+        alert("⚠️ Network error! Please check your connection.");
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.value = "Submit";
+    }
+
+    window.onload = makeClickable;
   </script>
 </head>
 
@@ -98,8 +154,8 @@
 
   <h1>Registration Form for HTML Basic to Advance Course (Accessible)</h1>
 
-  <form action="thanks. html" name="registration" method="POST" >
-    <input type="hidden" name="form-name" value="registration">
+  <form method="POST" onsubmit="handleSubmit(event)">
+    <!-- Web3Forms Access Key -->
     <input type="hidden" name="access_key" value="5d1e165c-64bf-4ab8-966b-005ddfee7869">
 
     <div>
@@ -109,53 +165,77 @@
 
     <div>
       Email:<br>
-      <input type="email" placeholder="Enter your Email id" name="Email ID" required>
+      <input type="email" placeholder="Enter your Email id" name="email" required>
     </div>
 
     <div>
       Mobile No:<br>
-      <input type="tel" placeholder="Enter your Phone number" name="Mobile No:" required>
+      <input type="tel" placeholder="Enter your Phone number" name="phone" required>
     </div>
 
     <div>
       Date of Birth:<br>
-      <input type="date" name="DOB" required>
+      <input type="date" name="dob" required>
     </div>
 
     <div>
       Gender:<br>
-      <input type="radio" name="gender" value="Male" required> Male
-      <input type="radio" name="gender" value="Female" required> Female
-      <input type="radio" name="gender" value="Others" required> Others
+      <input type="radio" id="male" name="gender" value="Male" required> 
+      <span class="clickable" data-for="male">Male</span>
+
+      <input type="radio" id="female" name="gender" value="Female" required> 
+      <span class="clickable" data-for="female">Female</span>
+
+      <input type="radio" id="others" name="gender" value="Others" required> 
+      <span class="clickable" data-for="others">Others</span>
     </div>
 
     <div>
-      You have any Disabilities:<br>
-      <input type="checkbox" name="able" value="low vision"> Low vision <br>
-      <input type="checkbox" name="able" value="blind"> Blind <br>
-      <input type="checkbox" name="ablle" value="nothing"> No Disabilities
+      Disabilities:<br>
+      <input type="checkbox" id="lowvision" name="disability" value="Low vision"> 
+      <span class="clickable" data-for="lowvision">Low vision</span><br>
+
+      <input type="checkbox" id="blind" name="disability" value="Blind"> 
+      <span class="clickable" data-for="blind">Blind</span><br>
+
+      <input type="checkbox" id="nothing" name="disability" value="None"> 
+      <span class="clickable" data-for="nothing">No Disabilities</span>
     </div>
 
     <div>
-      You are comfortable with:<br>
-      <input type="radio" name="sr" value="NVDA" required> NVDA <br>
-      <input type="radio" name="sr" value="JAWS" required> JAWS <br>
-      <input type="radio" name="sr" value="both" required> Both
+      Comfortable with:<br>
+      <input type="radio" id="nvda" name="sr" value="NVDA" required> 
+      <span class="clickable" data-for="nvda">NVDA</span><br>
+
+      <input type="radio" id="jaws" name="sr" value="JAWS" required> 
+      <span class="clickable" data-for="jaws">JAWS</span><br>
+
+      <input type="radio" id="both" name="sr" value="Both" required> 
+      <span class="clickable" data-for="both">Both</span>
     </div>
 
     <div>
       Current status:<br>
-      <input type="radio" name="working-status" value="Student" required> Student <br>
-      <input type="radio" name="working-status" value="self-Emploid" required> Self-Employed <br>
-      <input type="radio" name="working-status" value="full time/part time" required> Employed full time/part time<br>
-      <input type="radio" name="working-status" value="Unemploid" required> Unemployed<br>
-      <input type="radio" name="working-status" value="others" required id="others"> Others 
+      <input type="radio" id="student" name="status" value="Student" required> 
+      <span class="clickable" data-for="student">Student</span><br>
+
+      <input type="radio" id="self" name="status" value="Self-Employed" required> 
+      <span class="clickable" data-for="self">Self-Employed</span><br>
+
+      <input type="radio" id="emp" name="status" value="Employed" required> 
+      <span class="clickable" data-for="emp">Employed full time/part time</span><br>
+
+      <input type="radio" id="unemp" name="status" value="Unemployed" required> 
+      <span class="clickable" data-for="unemp">Unemployed</span><br>
+
+      <input type="radio" id="othwork" name="status" value="Other" required> 
+      <span class="clickable" data-for="othwork">Others</span>
       <input type="text" placeholder="Please specify">
     </div>
 
     <div>
       City:<br>
-      <input type="text" placeholder="Enter your city" name="City" required>
+      <input type="text" placeholder="Enter your city" name="city" required>
     </div>
 
     <div>
@@ -164,8 +244,8 @@
     </div>
 
     <div>
-      Complete Address:<br>
-      <input type="textbox" placeholder="Enter your complete address (state, city, colony, building/house name and number, Pincode)." name="Complete address" required>
+      Address:<br>
+      <input type="textbox" placeholder="Enter your complete address" name="address" required>
     </div>
 
     <div>
